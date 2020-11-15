@@ -1,0 +1,14 @@
+.login__top {
+  background-color: #fff059;
+  display: block;
+  height: 11.375rem;
+  width: 100%;
+}
+.login__form {
+  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.15);
+  margin: -6.875rem auto 0;
+  max-width: 26.5rem;
+  min-height: 25.5625rem;
+  padding: 2rem 4rem;
+  background-color: rgb(253, 253, 253);
+}
