@@ -1,3 +1,5 @@
+import firebase from "firebase";
+
 const firebaseConfig = {
   apiKey: "AIzaSyB54evozJAKauVIgSNANmkS4LSxz0YCujc",
   authDomain: "emercado-fb092.firebaseapp.com",
@@ -7,3 +9,10 @@ const firebaseConfig = {
   messagingSenderId: "593907618064",
   appId: "1:593907618064:web:dcf4b9f683d2f361a39595",
 };
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export { db, auth };
