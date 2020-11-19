@@ -1,0 +1,22 @@
+.brandStore__img {
+  object-fit: cover;
+  display: flex;
+  height: 180px;
+  width: 100%;
+  object-position: top;
+}
+.brandStore__brandimg {
+  border: 1px solid #bebdbd;
+  border-radius: 5px;
+  height: 100px;
+  width: 130px;
+  position: absolute;
+  top: 230px;
+  left: 80px;
+}
+.brandStore__row {
+  display: flex;
+  z-index: 1;
+  margin-left: 220px;
+  margin-right: 5px;
+}
