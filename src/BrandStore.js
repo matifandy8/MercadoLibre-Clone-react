@@ -17,41 +17,41 @@ function BrandStore() {
       </div>
       <div className="brandStore__row">
         <Product
-          id="12321341"
-          title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
-          price={11.96}
+          id="1"
+          title="Notebook Lenovo Thinkbook 13s I5/13,3/16gb/256gb- Oficial"
+          price={1600}
           image="https://http2.mlstatic.com/D_NQ_NP_758886-MLU42155384479_062020-W.webp"
         />
         <Product
-          id="49538094"
-          title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-          price={239.0}
+          id="2"
+          title="Tablet Lenovo 10 Tb-x505l Lte/ Ram 2gb/ Rom 16gb"
+          price={270}
           image="https://http2.mlstatic.com/D_NQ_NP_852863-MLU42958152306_072020-W.webp"
         />
         <Product
-          id="4903850"
-          title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-          price={199.99}
+          id="3"
+          title="Monitor Lenovo Thinkvision S22e "
+          price={150}
           image="https://http2.mlstatic.com/D_NQ_NP_647905-MLU42184073149_062020-W.webp"
         />
       </div>
       <div className="brandStore__row">
         <Product
-          id="4903850"
-          title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-          price={199.99}
+          id="4"
+          title="Aio Lenovo A540-24arr Ryzen3/8gb/1tb/24 - Nueva"
+          price={999}
           image="https://http2.mlstatic.com/D_NQ_NP_653855-MLU42819496963_072020-W.webp"
         />
         <Product
           id="23445930"
-          title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
-          price={98.99}
+          title="Pc Lenovo Thinkcentre M720s Sff I5/12gb Ram/256gb Ssd"
+          price={1200}
           image="https://http2.mlstatic.com/D_NQ_NP_850084-MLU42183823481_062020-W.webp"
         />
         <Product
-          id="3254354345"
-          title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
-          price={598.99}
+          id="5"
+          title="Lenovo Chromebook 100e 11,6 - Oficial"
+          price={470}
           image="https://http2.mlstatic.com/D_NQ_NP_789366-MLU42138628966_062020-W.webp"
         />
       </div>

@@ -4,6 +4,8 @@ import Header from "./Header";
 import Login from "./Login";
 import Home from "./Home";
 import BrandStore from "./BrandStore";
+import { auth } from "./firebase";
+import { useEffect } from "react";
 
 function App() {
   return (
