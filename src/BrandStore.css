@@ -15,8 +15,6 @@
   left: 80px;
 }
 .brandStore__row {
-  display: flex;
-  flex-wrap: wrap;
   z-index: 1;
   margin-left: 300px;
   margin-right: 5px;

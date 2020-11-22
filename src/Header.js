@@ -25,6 +25,7 @@ function Header() {
           <SearchIcon className="header__searchIcon" />
         </div>
         <span>Todo para la temporada de verano acá</span>
+        <MenuIcon />
       </div>
       <div className="header__bottom">
         {/* Address */}

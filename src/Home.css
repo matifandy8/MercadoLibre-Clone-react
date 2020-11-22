@@ -8,6 +8,10 @@
   font-weight: 300;
   margin: 0 0 0 8px;
 }
+.home__link {
+  text-decoration: none;
+  color: black;
+}
 
 .home__stores {
   display: flex;

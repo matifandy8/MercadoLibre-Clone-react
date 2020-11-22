@@ -117,3 +117,15 @@
 .header__left-nav > .MuiSvgIcon-root {
   font-size: 1em !important;
 }
+
+@media all and (max-width: 1024px) {
+  .header__top > span {
+    display: none;
+  }
+  .header__bottom-nav {
+    display: none;
+  }
+  .header__link-log {
+    display: none;
+  }
+}
