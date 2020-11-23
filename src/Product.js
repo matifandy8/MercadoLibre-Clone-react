@@ -4,22 +4,23 @@ import data from "./data";
 
 console.log(data);
 
-function Product() {
+function Product(props) {
+  const { product } = props;
   return (
     <div className="products">
-      {data.products.map((product) => (
-        <div key={product._id} className="product">
+      <div key={product._id} className="product">
+        <a href={`/product/${product._id}`}>
           <img src={product.image} alt="" />
-          <div className="product__info">
-            <p className="product__price">
-              <small>$</small>
-              <strong>{product.price}</strong>
-            </p>
-            <p>{product.name}</p>
-            <button className="product__button">Comprar ahora</button>
-          </div>
+        </a>
+        <div className="product__info">
+          <p className="product__price">
+            <small>$</small>
+            <strong>{product.price}</strong>
+          </p>
+          <p>{product.name}</p>
+          <button className="product__button">Comprar ahora</button>
         </div>
-      ))}
+      </div>
     </div>
   );
 }

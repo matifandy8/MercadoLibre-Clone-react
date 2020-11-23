@@ -1,31 +1,32 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
-import Home from "./Home";
 import BrandStore from "./BrandStore";
 import { auth } from "./firebase";
-import { useEffect } from "react";
+import ProductDetails from "./ProductDetails";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="app">
         <Switch>
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/BrandStore">
+          <Route path="/" exact>
             <Header />
             <BrandStore />
           </Route>
-          <Route path="/">
-            <Header />
-            <Home />
-          </Route>
+          <Route path="/product/:id" component={ProductDetails}></Route>
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

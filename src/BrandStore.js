@@ -1,5 +1,6 @@
 import React from "react";
 import "./BrandStore.css";
+import data from "./data";
 import Product from "./Product";
 
 function BrandStore() {
@@ -16,7 +17,9 @@ function BrandStore() {
         />
       </div>
       <div className="brandStore__row">
-        <Product />
+        {data.products.map((product) => (
+          <Product key={product._id} product={product}></Product>
+        ))}
       </div>
     </div>
   );
