@@ -1,9 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts } from "./actions/productActions";
 import "./BrandStore.css";
-import data from "./data";
+import LoadingBox from "./LoadingBox";
+import MessageBox from "./MessageBox";
 import Product from "./Product";
 
 function BrandStore() {
+  const dispatch = useDispatch();
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products } = productList;
+
+  useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch]);
+
   return (
     <div className="brandStore">
       <div className="brandStore__top">
@@ -16,11 +28,17 @@ function BrandStore() {
           src="https://http2.mlstatic.com/D_Q_NP_897210-MLA26014325691_092017-T.webp"
         />
       </div>
-      <div className="brandStore__row">
-        {data.products.map((product) => (
-          <Product key={product._id} product={product}></Product>
-        ))}
-      </div>
+      {loading ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <MessageBox variant="danger">{error}</MessageBox>
+      ) : (
+        <div className="brandStore__row">
+          {products.map((product) => (
+            <Product key={product._id} product={product}></Product>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
