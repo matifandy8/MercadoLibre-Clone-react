@@ -8,7 +8,6 @@ import {
 import Header from "./Header";
 import Login from "./Login";
 import BrandStore from "./BrandStore";
-import { auth } from "./firebase";
 import ProductDetails from "./ProductDetails";
 
 function App() {

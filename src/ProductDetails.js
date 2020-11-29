@@ -26,7 +26,7 @@ function ProductDetails(props) {
         <div className="productDetails__price">
           <h1>{product.name}</h1>
           <strong>${product.price}</strong>
-          <button>Comprar ahora</button>
+          <button className="productDetails__button">Comprar ahora</button>
         </div>
       </div>
     </div>

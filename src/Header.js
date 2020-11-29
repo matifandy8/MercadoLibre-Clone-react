@@ -55,7 +55,7 @@ function Header() {
           <span>Crea tu cuenta</span>
         </Link>
         <Link to="/login" className="header__link-log">
-          <span>Ingresa</span>
+          <span>ingresa</span>
         </Link>
         <Link to="/" className="header__link-log">
           <span>Mis compras</span>
