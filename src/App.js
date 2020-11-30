@@ -9,6 +9,7 @@ import Header from "./Header";
 import Login from "./Login";
 import BrandStore from "./BrandStore";
 import ProductDetails from "./ProductDetails";
+import Cart from "./Cart";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/cart/:id" component={Cart}></Route>
           <Route path="/" exact>
             <Header />
             <BrandStore />

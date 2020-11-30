@@ -1,9 +1,6 @@
 import React from "react";
 import "./Product.css";
-import data from "./data";
 import { Link } from "react-router-dom";
-
-console.log(data);
 
 function Product(props) {
   const { product } = props;

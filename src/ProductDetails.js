@@ -16,6 +16,10 @@ function ProductDetails(props) {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
 
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}`);
+  };
+
   return (
     <div>
       {loading ? (
@@ -40,7 +44,12 @@ function ProductDetails(props) {
             <div className="productDetails__price">
               <h1>{product.name}</h1>
               <strong>${product.price}</strong>
-              <button className="productDetails__button">Comprar ahora</button>
+              <button
+                onClick={addToCartHandler}
+                className="productDetails__button"
+              >
+                Comprar ahora
+              </button>
             </div>
           </div>
         </div>
