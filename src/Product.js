@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Product(props) {
   const { product } = props;
   return (
-    <Link to={`/product/${product._id}`}>
+    <Link to={`/product/${product._id}`} style={{ textDecoration: "none" }}>
       <div className="products">
         <div key={product._id} className="product">
           <img src={product.image} />

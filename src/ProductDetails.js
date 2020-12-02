@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductDetails.css";
 import Header from "./Header";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,6 +9,7 @@ import { detailsProduct } from "./actions/productActions";
 function ProductDetails(props) {
   const productDetails = useSelector((state) => state.productDetails);
   const productId = props.match.params.id;
+  const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const { loading, error, product } = productDetails;
 
@@ -17,18 +18,18 @@ function ProductDetails(props) {
   }, [dispatch, productId]);
 
   const addToCartHandler = () => {
-    props.history.push(`/cart/${productId}`);
+    props.history.push(`/cart/${productId}?qty=${qty}`);
   };
 
   return (
     <div>
+      <Header />
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div className="productDetails">
-          <Header />
           <div className="productDetails__top">
             <img
               className="productDetails__img"
@@ -44,6 +45,15 @@ function ProductDetails(props) {
             <div className="productDetails__price">
               <h1>{product.name}</h1>
               <strong>${product.price}</strong>
+              <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
               <button
                 onClick={addToCartHandler}
                 className="productDetails__button"
