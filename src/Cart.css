@@ -1,0 +1,79 @@
+button {
+  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 48px;
+  padding: 0 44px;
+  height: 48px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.18s ease-out;
+  display: inline-block;
+  width: auto;
+  border-color: transparent;
+  background-color: #3483fa;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+select {
+  font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 48px;
+  padding: 0 14px;
+  height: 48px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.18s ease-out;
+  display: inline-block;
+  width: auto;
+  border-color: transparent;
+  background-color: #3483fa;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.cart__container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 50px;
+  padding: 10px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: auto;
+  min-width: 284px;
+  max-width: 264px;
+  background-color: white;
+  z-index: 1;
+  border: 1px solid #bdbbbb;
+  border-radius: 5px;
+  margin-bottom: 19px;
+  list-style: none;
+}
+.cart__item:hover {
+  box-shadow: 5px 0px 5px 5px rgba(0, 0, 0, 0.1),
+    0 -1px 2px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.cart__item-image {
+  width: 284px;
+  height: 234px;
+  object-fit: contain;
+}
+.cart__subtotal {
+  border: 1px solid #999999;
+  margin-top: 50px;
+  margin-left: 300px;
+  height: 100px;
+  background-color: #fff;
+}
