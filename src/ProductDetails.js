@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";
 import { detailsProduct } from "./actions/productActions";
+import Footer from "./Footer";
 
 function ProductDetails(props) {
   const productDetails = useSelector((state) => state.productDetails);
@@ -64,6 +65,7 @@ function ProductDetails(props) {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

@@ -10,6 +10,7 @@ import Login from "./Login";
 import BrandStore from "./BrandStore";
 import ProductDetails from "./ProductDetails";
 import Cart from "./Cart";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" exact>
             <Header />
             <BrandStore />
+            <Footer />
           </Route>
           <Route path="/product/:id" component={ProductDetails}></Route>
         </Switch>

@@ -5,6 +5,7 @@ import MessageBox from "./MessageBox";
 import { addToCart, removeFromCart } from "./actions/cartActions";
 import Header from "./Header";
 import "./Cart.css";
+import Footer from "./Footer";
 
 function Cart(props) {
   const productId = props.match.params.id;
@@ -86,6 +87,7 @@ function Cart(props) {
           <button type="button">Comprar Productos</button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

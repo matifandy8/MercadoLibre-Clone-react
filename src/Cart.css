@@ -38,6 +38,7 @@ select {
 }
 .cart__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -71,9 +72,9 @@ select {
   object-fit: contain;
 }
 .cart__subtotal {
-  border: 1px solid #999999;
-  margin-top: 50px;
-  margin-left: 300px;
-  height: 100px;
-  background-color: #fff;
+  align-self: center;
+  padding: 10vh;
+  margin-left: 10vh;
+  height: 60vh;
+  background-color: rgb(247, 247, 247);
 }
