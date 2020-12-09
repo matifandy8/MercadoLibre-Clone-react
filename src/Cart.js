@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import MessageBox from "./MessageBox";
@@ -6,6 +6,7 @@ import { addToCart, removeFromCart } from "./actions/cartActions";
 import Header from "./Header";
 import "./Cart.css";
 import Footer from "./Footer";
+import PayPal from "./PayPal";
 
 function Cart(props) {
   const productId = props.match.params.id;
@@ -24,6 +25,8 @@ function Cart(props) {
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   };
+
+  const [checkout, setCheckOut] = useState(false);
 
   return (
     <div className="cart">
@@ -84,7 +87,17 @@ function Cart(props) {
             Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
             {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
           </h2>
-          <button type="button">Comprar Productos</button>
+          {checkout ? (
+            <PayPal />
+          ) : (
+            <button
+              onClick={() => {
+                setCheckOut(true);
+              }}
+            >
+              Paypal
+            </button>
+          )}
         </div>
       </div>
       <Footer />
